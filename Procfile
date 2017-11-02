@@ -1,0 +1,1 @@
+web: gunicorn hibot:app --log-file=-
