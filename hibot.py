@@ -63,7 +63,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if event.message.text == 'A':
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="big sexy boy"))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=" big sexy boy"))
     else:
         line_bot_api.reply_message(event.reply_token,TextMessage(text=event.message.text))
 
