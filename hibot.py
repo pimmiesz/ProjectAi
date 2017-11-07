@@ -19,7 +19,7 @@ handler = WebhookHandler('ae05c21de4d24de723d09aa4a64eb206')
 
 @app.route('/')
 def index():
-    return "hi big"
+    return "Welcome to go to TU"
 
 
 """
@@ -74,15 +74,7 @@ def handle_message(event):
             date = 'สอบ 3 – 4 มีนาคม 2561'
 
         return date
-
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="%s") % testDate(event.message.text))
-
-    """if event.message.text == 'A':
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Big sexy boy"))
-    else:
-        line_bot_api.reply_message(event.reply_token, TextMessage(text=event.message.text))
-"""
-
+    line_bot_api.reply_message(event.reply_token, TextMessage(text=testDate(event.message.text)))
 
 if __name__ == "__main__":
     app.run()
